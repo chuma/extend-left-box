@@ -58,8 +58,8 @@ function allocate(actor, box, flags) {
     childBox.y2 = allocHeight + cornerHeight;
     panel._leftCorner.actor.allocate(childBox, flags);
 
-    let [cornerMinWidth, cornerWidth] = panel._rightCorner.actor.get_preferred_width(-1);
-    let [cornerMinHeight, cornerHeight] = panel._rightCorner.actor.get_preferred_width(-1);
+    [cornerMinWidth, cornerWidth] = panel._rightCorner.actor.get_preferred_width(-1);
+    [cornerMinHeight, cornerHeight] = panel._rightCorner.actor.get_preferred_width(-1);
     childBox.x1 = allocWidth - cornerWidth;
     childBox.x2 = allocWidth;
     childBox.y1 = allocHeight;
